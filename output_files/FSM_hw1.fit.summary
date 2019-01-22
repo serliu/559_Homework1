@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jan 22 11:11:11 2019
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : FSM_hw1
+Top-level Entity Name : FSM_hw1
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 7 / 22,320 ( < 1 % )
+    Total combinational functions : 7 / 22,320 ( < 1 % )
+    Dedicated logic registers : 5 / 22,320 ( < 1 % )
+Total registers : 5
+Total pins : 4 / 154 ( 3 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

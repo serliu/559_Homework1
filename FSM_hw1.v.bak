@@ -1,0 +1,43 @@
+module FSM_hw1(w, z);
+
+
+	input w;
+	output z; 
+
+	localparam A=0, B=1, C=2, D=4, E=5, F=6, G=7;
+	reg [2:0] state,nxtState; 
+	
+	always @(posedge clk) begin
+	 if (reset) begin
+	 state <= A; // Initial state
+	 end else begin
+	 state <= nxtState;
+	 end
+	end 
+	
+	always @(*) begin
+		nxtState = state;
+		 out = 0;
+		 case (state)
+			 A : if (in) nxtState = C;
+			 else nxtState = B;
+			 B : if (in) nxtState = D;
+			 C : if (~in) nxtState = E;
+			 D : begin
+			 out = 1;
+			 if (in) nxtState = C;
+			 else nxtState = E;
+			 end
+			 E : begin
+			 out = 1;
+			 if (in) nxtState = D;
+			 else nxtState = B;
+			 end
+			 default : begin
+			 out = 1’bX;
+			 nxtState = 3’bX;
+		 end
+		endcase
+	 end
+
+endmodule 
